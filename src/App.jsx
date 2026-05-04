@@ -47,6 +47,7 @@ export default function App() {
           <div className="hidden lg:block">
             <img
               src={preview}
+              alt="Elevated Auto Project"
               className="rounded-2xl shadow-2xl"
             />
           </div>
@@ -54,7 +55,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* 🔥 NEW WORK SECTION */}
+      {/* WORK */}
       <section className="py-28 px-6 bg-gradient-to-b from-black via-purple-950/30 to-black">
         <div className="max-w-7xl mx-auto text-center">
 
@@ -67,22 +68,72 @@ export default function App() {
           </h2>
 
           <p className="text-white/60 max-w-2xl mx-auto mb-16">
-            A selection of real client work and high-end concept designs built for service-based businesses.
+            High-converting websites built for real businesses.
           </p>
 
-          <div className="max-w-6xl mx-auto">
-            <div className="relative rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-2xl">
+          {/* GRID */}
+          <div className="grid md:grid-cols-2 gap-10">
 
-              {/* Glow */}
-              <div className="absolute -inset-10 bg-fuchsia-500/20 blur-3xl rounded-full" />
+            {/* CARD 1 - REAL CLIENT */}
+            <div className="group relative rounded-3xl border border-white/10 bg-white/5 p-4 backdrop-blur-xl overflow-hidden hover:scale-[1.02] transition duration-500">
+              <div className="absolute -inset-10 bg-fuchsia-500/20 blur-3xl opacity-0 group-hover:opacity-100 transition" />
+
+              <img
+                src={preview}
+                className="rounded-2xl mb-6"
+              />
+
+              <h3 className="text-2xl font-semibold">Auto & Diesel Repair</h3>
+              <p className="text-white/60 mt-2">
+                High-converting service website designed for mobile mechanics and local search visibility.
+              </p>
+            </div>
+
+            {/* CARD 2 - MED SPA STYLE */}
+            <div className="group relative rounded-3xl border border-white/10 bg-gradient-to-br from-purple-900/40 to-black p-4 backdrop-blur-xl overflow-hidden hover:scale-[1.02] transition duration-500">
+              <div className="absolute -inset-10 bg-purple-500/20 blur-3xl opacity-0 group-hover:opacity-100 transition" />
 
               <img
                 src={portfolio}
-                alt="Portfolio mockups"
-                className="relative w-full rounded-[1.5rem]"
+                className="rounded-2xl mb-6"
               />
 
+              <h3 className="text-2xl font-semibold">Luxury Med Spa</h3>
+              <p className="text-white/60 mt-2">
+                Elegant, high-end UI designed for beauty, skincare, and cosmetic clinics.
+              </p>
             </div>
+
+            {/* CARD 3 - LAW FIRM STYLE */}
+            <div className="group relative rounded-3xl border border-white/10 bg-gradient-to-br from-gray-900 to-black p-4 backdrop-blur-xl overflow-hidden hover:scale-[1.02] transition duration-500">
+              <div className="absolute -inset-10 bg-white/10 blur-3xl opacity-0 group-hover:opacity-100 transition" />
+
+              <img
+                src={portfolio}
+                className="rounded-2xl mb-6 grayscale"
+              />
+
+              <h3 className="text-2xl font-semibold">Law Firm Website</h3>
+              <p className="text-white/60 mt-2">
+                Clean, authoritative design built to establish trust and convert legal clients.
+              </p>
+            </div>
+
+            {/* CARD 4 - HOME SERVICES */}
+            <div className="group relative rounded-3xl border border-white/10 bg-gradient-to-br from-fuchsia-900/30 to-black p-4 backdrop-blur-xl overflow-hidden hover:scale-[1.02] transition duration-500">
+              <div className="absolute -inset-10 bg-fuchsia-500/20 blur-3xl opacity-0 group-hover:opacity-100 transition" />
+
+              <img
+                src={preview}
+                className="rounded-2xl mb-6"
+              />
+
+              <h3 className="text-2xl font-semibold">Home Services</h3>
+              <p className="text-white/60 mt-2">
+                Designed for contractors and local service businesses to generate leads fast.
+              </p>
+            </div>
+
           </div>
 
         </div>
