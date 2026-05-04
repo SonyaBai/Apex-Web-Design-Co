@@ -1,6 +1,6 @@
 import React from "react";
 
-// images (from your repo root)
+// images
 import preview from "../elevated-auto-preview.png";
 import portfolio from "../portfolio-mockup.png";
 
@@ -27,16 +27,12 @@ export default function App() {
       {/* HERO */}
       <section className="min-h-screen flex items-center px-6 pt-32 relative overflow-hidden">
 
-        {/* gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-black via-[#140018] to-[#2a003f]" />
-
-        {/* glow accents */}
         <div className="absolute top-[-200px] left-[-100px] w-[500px] h-[500px] bg-fuchsia-500/20 blur-[120px]" />
         <div className="absolute bottom-[-200px] right-[-100px] w-[500px] h-[500px] bg-purple-600/20 blur-[120px]" />
 
         <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
 
-          {/* LEFT TEXT */}
           <div>
             <p className="text-fuchsia-300 text-xs uppercase tracking-[0.3em] mb-4">
               Premium websites for service businesses
@@ -62,15 +58,14 @@ export default function App() {
 
               <a
                 href="#work"
-                className="border border-white/20 px-6 py-4 rounded-full text-white hover:bg-white/10 transition"
+                className="border border-white/20 px-6 py-4 rounded-full hover:bg-white/10 transition"
               >
                 View Work
               </a>
             </div>
           </div>
 
-          {/* RIGHT HERO IMAGE */}
-          <div className="relative hidden lg:block">
+          <div className="hidden lg:block">
             <div className="rounded-3xl border border-white/10 bg-white/5 p-4 shadow-2xl">
               <img
                 src={portfolio}
@@ -86,14 +81,13 @@ export default function App() {
       <section id="work" className="py-20 px-6 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
 
-          {/* TEXT */}
           <div>
             <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
               Featured Project
             </p>
 
             <a
-              href="https://elevatedautoanddieselrepair.com"
+              href="https://www.elevateautoanddieselrepair.com"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-fuchsia-300 transition"
@@ -109,10 +103,9 @@ export default function App() {
             </p>
           </div>
 
-          {/* IMAGE */}
           <div className="relative rounded-3xl border border-white/10 bg-white/5 p-4 shadow-2xl">
             <a
-              href="https://elevatedautoanddieselrepair.com"
+              href="https://www.elevateautoanddieselrepair.com"
               target="_blank"
               rel="noopener noreferrer"
               className="group block"
@@ -137,7 +130,6 @@ export default function App() {
       <section className="py-20 px-6 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
 
-          {/* IMAGE LEFT */}
           <div className="rounded-3xl border border-white/10 bg-white/5 p-4 shadow-2xl">
             <img
               src={portfolio}
@@ -146,7 +138,6 @@ export default function App() {
             />
           </div>
 
-          {/* TEXT RIGHT */}
           <div>
             <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
               Design Studies
@@ -173,9 +164,7 @@ export default function App() {
 
       {/* SERVICES */}
       <section className="py-20 px-6 max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold mb-10">
-          Services
-        </h2>
+        <h2 className="text-4xl font-bold mb-10">Services</h2>
 
         <div className="grid md:grid-cols-3 gap-6">
           {[
@@ -185,7 +174,7 @@ export default function App() {
           ].map(([title, text, image]) => (
             <div
               key={title}
-              className="group p-7 rounded-3xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.08] transition"
+              className="p-7 rounded-3xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.08] transition"
             >
               <img
                 src={image}
