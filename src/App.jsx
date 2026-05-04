@@ -1,211 +1,107 @@
 import React from "react";
+
+// images (from your repo root)
 import preview from "../elevated-auto-preview.png";
 import portfolio from "../portfolio-mockup.png";
 
 export default function App() {
   return (
-    <main className="min-h-screen bg-black text-white overflow-hidden">
+    <main className="bg-black text-white overflow-hidden">
+
       {/* NAV */}
-      <nav className="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-xl">
+      <nav className="fixed top-0 left-0 w-full z-50 bg-black/60 backdrop-blur-xl border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="text-xl font-bold">
-            Apex Web Design <span className="text-fuchsia-400">Co</span>
+            Apex<span className="text-fuchsia-400">.</span>
           </h1>
 
           <a
             href="#contact"
-            className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-black hover:bg-fuchsia-100 transition"
+            className="bg-white text-black px-4 py-2 rounded-full text-sm font-semibold hover:bg-fuchsia-100 transition"
           >
-            Free Quote
+            Get Quote
           </a>
         </div>
       </nav>
 
       {/* HERO */}
-      <section className="relative min-h-[88vh] px-6 py-24 overflow-hidden flex items-center">
-        <div className="absolute inset-0 bg-[#050008]" />
+      <section className="min-h-screen flex items-center px-6 pt-32 relative overflow-hidden">
 
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(168,85,247,.25),transparent_40%),radial-gradient(circle_at_80%_20%,rgba(236,72,153,.2),transparent_40%),radial-gradient(circle_at_50%_80%,rgba(124,58,237,.2),transparent_40%)]" />
+        {/* gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-[#140018] to-[#2a003f]" />
 
-        <div className="absolute -top-40 -left-40 w-[520px] h-[520px] bg-fuchsia-500/20 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute -bottom-40 -right-40 w-[620px] h-[620px] bg-purple-600/20 rounded-full blur-[140px] animate-pulse" />
-        <div className="absolute top-1/2 left-1/2 w-[760px] h-[760px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-fuchsia-500/10 via-purple-500/10 to-transparent blur-[120px] animate-[spin_38s_linear_infinite]" />
+        {/* glow accents */}
+        <div className="absolute top-[-200px] left-[-100px] w-[500px] h-[500px] bg-fuchsia-500/20 blur-[120px]" />
+        <div className="absolute bottom-[-200px] right-[-100px] w-[500px] h-[500px] bg-purple-600/20 blur-[120px]" />
 
-        <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
+        <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+
+          {/* LEFT TEXT */}
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70 mb-6 backdrop-blur">
-              <span className="h-2 w-2 rounded-full bg-fuchsia-400 animate-pulse" />
+            <p className="text-fuchsia-300 text-xs uppercase tracking-[0.3em] mb-4">
               Premium websites for service businesses
-            </div>
+            </p>
 
-            <h2 className="text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight">
-              Websites That Make Your Business Look Next-Level
-            </h2>
+            <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+              Websites That Make Your Business Look{" "}
+              <span className="text-fuchsia-300">Elevated</span>
+            </h1>
 
-            <p className="mt-6 text-lg md:text-xl text-white/70 max-w-xl leading-relaxed">
+            <p className="text-white/60 mt-6 text-lg max-w-lg">
               High-end, SEO-ready websites built to help service businesses get
               more calls, more leads, and more trust online.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            <div className="flex gap-4 mt-8">
               <a
                 href="#contact"
-                className="rounded-full bg-white text-black px-8 py-4 font-semibold hover:bg-fuchsia-100 hover:scale-105 transition"
+                className="bg-white text-black px-6 py-4 rounded-full font-semibold hover:bg-fuchsia-100 transition"
               >
                 Get My Free Website Quote
               </a>
 
               <a
-                href="tel:7204670527"
-                className="rounded-full border border-white/20 bg-white/5 px-8 py-4 font-semibold backdrop-blur hover:bg-white/10 transition"
+                href="#work"
+                className="border border-white/20 px-6 py-4 rounded-full text-white hover:bg-white/10 transition"
               >
-                Call Now
+                View Work
               </a>
             </div>
-
-            <div className="mt-8 grid grid-cols-3 gap-3 max-w-lg text-sm text-white/60">
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                <p className="text-white font-semibold">7–10 Days</p>
-                <p>Fast builds</p>
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                <p className="text-white font-semibold">SEO Ready</p>
-                <p>Built to rank</p>
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                <p className="text-white font-semibold">Lead Focused</p>
-                <p>More calls</p>
-              </div>
-            </div>
           </div>
 
-          <div className="relative">
-            <div className="absolute -inset-8 bg-fuchsia-500/25 blur-3xl rounded-full" />
-
-            <div className="relative rounded-[2rem] border border-white/15 bg-white/10 p-4 shadow-2xl backdrop-blur-xl rotate-1 hover:rotate-0 transition duration-500">
-              <div className="rounded-[1.5rem] overflow-hidden border border-white/10 bg-black">
-                <img
-                  src={portfolio}
-                  alt="Premium website design examples"
-                  className="w-full h-[440px] object-cover object-top rounded-[1.5rem] hover:scale-105 transition duration-700"
-                />
-              </div>
-            </div>
-
-            <div className="absolute -bottom-8 -left-6 rounded-3xl border border-white/10 bg-black/75 backdrop-blur-xl p-5 shadow-xl">
-              <p className="text-2xl font-bold">Design Examples</p>
-              <p className="text-white/50 text-sm">
-                Med Spa • Auto • Home Services
-              </p>
-            </div>
-
-            <div className="absolute -top-6 -right-4 rounded-2xl border border-white/10 bg-white/10 backdrop-blur-xl px-5 py-3 text-sm text-white/75">
-              Built to convert
+          {/* RIGHT HERO IMAGE */}
+          <div className="relative hidden lg:block">
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-4 shadow-2xl">
+              <img
+                src={portfolio}
+                alt="Website preview"
+                className="rounded-2xl w-full h-[500px] object-cover"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section className="py-20 px-6 max-w-7xl mx-auto">
-        <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
-          Services
-        </p>
-
-        <h2 className="text-4xl md:text-5xl font-bold mb-10">
-          Everything your site needs to look premium and generate leads.
-        </h2>
-
-        <div className="grid md:grid-cols-3 gap-6">
-          {[
-            [
-              "Custom Web Design",
-              "Modern websites designed around your brand, your offer, and your ideal customer.",
-            ],
-            [
-              "Local SEO",
-              "SEO-ready structure to help your business get found online.",
-            ],
-            [
-              "Website Redesign",
-              "Turn outdated websites into polished lead-generation tools.",
-            ],
-          ].map(([title, text]) => (
-            <div
-              key={title}
-              className="p-7 rounded-3xl border border-white/10 bg-white/5 hover:bg-white/10 hover:-translate-y-1 transition"
-            >
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-fuchsia-500/40 to-purple-600/30 mb-6" />
-              <h3 className="text-2xl font-semibold">{title}</h3>
-              <p className="text-white/60 mt-3">{text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* WORK */}
-      <section className="py-20 px-6 bg-gradient-to-b from-black via-purple-950/30 to-black">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
-            Work Samples
-          </p>
-
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Premium Designs for Service Businesses
-          </h2>
-
-          <p className="text-white/60 max-w-2xl mx-auto mb-10">
-            A mix of real client work and polished concept designs to show what
-            your business could look like online.
-          </p>
-
-          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-4 shadow-2xl">
-            <img
-              src={portfolio}
-              alt="Premium website portfolio mockups"
-              className="w-full rounded-[1.5rem]"
-            />
-          </div>
-
-          <div className="mt-10 grid md:grid-cols-2 gap-6 text-left">
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-              <p className="text-fuchsia-300 text-sm mb-2">
-                Real Client Project
-              </p>
-              <h3 className="text-2xl font-semibold">Elevated Auto & Diesel</h3>
-              <p className="text-white/60 mt-3">
-                A premium automotive service website built for visibility,
-                calls, and local credibility.
-              </p>
-            </div>
-
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
-              <p className="text-fuchsia-300 text-sm mb-2">
-                Concept Designs
-              </p>
-              <h3 className="text-2xl font-semibold">
-                Med Spa & Home Services
-              </h3>
-              <p className="text-white/60 mt-3">
-                High-end mockups showing how different service businesses can
-                look premium without using the same style every time.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* REAL PROJECT */}
-      <section className="py-20 px-6 max-w-7xl mx-auto">
+      {/* FEATURED PROJECT */}
+      <section id="work" className="py-20 px-6 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-10 items-center">
+
+          {/* TEXT */}
           <div>
             <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
               Featured Project
             </p>
 
-            <h2 className="text-4xl md:text-5xl font-bold">
-              Elevated Auto & Diesel
-            </h2>
+            <a
+              href="https://elevatedautoanddieselrepair.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-fuchsia-300 transition"
+            >
+              <h2 className="text-4xl md:text-5xl font-bold">
+                Elevated Auto & Diesel
+              </h2>
+            </a>
 
             <p className="text-white/60 mt-5 text-lg">
               A luxury-inspired website for an automotive repair business,
@@ -213,83 +109,115 @@ export default function App() {
             </p>
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-white/5 p-4 shadow-2xl">
-            <img
-              src={preview}
-              alt="Elevated Auto website preview"
-              className="w-full h-[420px] object-cover object-top rounded-2xl"
-            />
+          {/* IMAGE */}
+          <div className="relative rounded-3xl border border-white/10 bg-white/5 p-4 shadow-2xl">
+            <a
+              href="https://elevatedautoanddieselrepair.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block"
+            >
+              <img
+                src={preview}
+                alt="Elevated Auto preview"
+                className="rounded-2xl w-full h-[420px] object-cover object-top transition duration-500 group-hover:scale-[1.03]"
+              />
+
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition flex items-center justify-center rounded-2xl">
+                <span className="opacity-0 group-hover:opacity-100 bg-white/10 backdrop-blur px-4 py-2 rounded-full border border-white/20">
+                  View Live Site →
+                </span>
+              </div>
+            </a>
           </div>
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section
-        id="contact"
-        className="py-20 px-6 text-center bg-[radial-gradient(circle_at_50%_20%,rgba(255,0,204,.18),transparent_35%),linear-gradient(180deg,#000,#12001f)]"
-      >
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          Ready to Build Your Website?
-        </h2>
+      {/* SECOND PROJECT */}
+      <section className="py-20 px-6 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-10 items-center">
 
-        <p className="text-white/60 mb-10">
-          Send a quick message and I’ll follow up with next steps.
-        </p>
+          {/* IMAGE LEFT */}
+          <div className="rounded-3xl border border-white/10 bg-white/5 p-4 shadow-2xl">
+            <img
+              src={portfolio}
+              alt="Design concepts"
+              className="rounded-2xl w-full h-[420px] object-cover"
+            />
+          </div>
 
-        <form
-          action="https://formspree.io/f/xojrvwwb"
-          method="POST"
-          className="max-w-xl mx-auto space-y-4"
-        >
-          <input
-            type="hidden"
-            name="_subject"
-            value="New Lead - Apex Web Design Co"
-          />
-          <input type="text" name="_gotcha" style={{ display: "none" }} />
+          {/* TEXT RIGHT */}
+          <div>
+            <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
+              Design Studies
+            </p>
 
-          <input
-            name="name"
-            required
-            placeholder="Name"
-            className="w-full p-4 bg-white/10 border border-white/10 rounded-xl outline-none focus:border-fuchsia-300"
-          />
-          <input
-            name="email"
-            required
-            type="email"
-            placeholder="Email"
-            className="w-full p-4 bg-white/10 border border-white/10 rounded-xl outline-none focus:border-fuchsia-300"
-          />
-          <input
-            name="phone"
-            placeholder="Phone Number"
-            className="w-full p-4 bg-white/10 border border-white/10 rounded-xl outline-none focus:border-fuchsia-300"
-          />
-          <textarea
-            name="message"
-            required
-            placeholder="What kind of website do you need?"
-            rows="5"
-            className="w-full p-4 bg-white/10 border border-white/10 rounded-xl outline-none focus:border-fuchsia-300"
-          />
+            <h2 className="text-4xl md:text-5xl font-bold">
+              Med Spa & Home Services
+            </h2>
 
-          <button className="w-full py-4 bg-white text-black rounded-full font-semibold hover:bg-fuchsia-100 transition">
-            Get My Free Website Quote
-          </button>
-        </form>
+            <p className="text-white/60 mt-5 text-lg">
+              Premium website examples created to show different visual
+              directions for service-based businesses.
+            </p>
 
-        <p className="mt-8 text-white/50 text-sm">
-          Prefer to text?{" "}
-          <a href="tel:7204670527" className="text-white underline">
-            720-467-0527
-          </a>
-        </p>
+            <a
+              href="#contact"
+              className="inline-block mt-8 bg-white text-black px-6 py-4 rounded-full font-semibold hover:bg-fuchsia-100 transition"
+            >
+              Get a Similar Design
+            </a>
+          </div>
+        </div>
       </section>
 
-      <footer className="py-8 px-6 border-t border-white/10 text-center text-white/40 text-sm">
-        © {new Date().getFullYear()} Apex Web Design Co. All rights reserved.
-      </footer>
+      {/* SERVICES */}
+      <section className="py-20 px-6 max-w-7xl mx-auto">
+        <h2 className="text-4xl font-bold mb-10">
+          Services
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {[
+            ["Custom Web Design", "Modern websites designed around your brand.", portfolio],
+            ["Local SEO", "Built to rank and get found online.", preview],
+            ["Website Redesign", "Turn outdated sites into lead machines.", portfolio],
+          ].map(([title, text, image]) => (
+            <div
+              key={title}
+              className="group p-7 rounded-3xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.08] transition"
+            >
+              <img
+                src={image}
+                className="w-16 h-16 rounded-xl object-cover mb-6"
+              />
+
+              <h3 className="text-xl font-semibold">{title}</h3>
+
+              <p className="text-white/60 mt-2">{text}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section id="contact" className="py-24 px-6 text-center">
+        <h2 className="text-4xl font-bold mb-6">
+          Let’s build your next website
+        </h2>
+
+        <p className="text-white/60 mb-8">
+          Tell me about your business and I’ll show you what’s possible.
+        </p>
+
+        <a
+          href="mailto:youremail@gmail.com"
+          className="bg-white text-black px-8 py-4 rounded-full font-semibold hover:bg-fuchsia-100 transition"
+        >
+          Get Started
+        </a>
+      </section>
+
     </main>
   );
 }
