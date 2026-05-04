@@ -24,13 +24,12 @@ export default function App() {
       {/* HERO */}
       <section className="relative min-h-[88vh] px-6 py-24 overflow-hidden flex items-center">
         <div className="absolute inset-0 bg-[#050008]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(217,70,239,.22),transparent_32%),radial-gradient(circle_at_80%_30%,rgba(124,58,237,.28),transparent_34%),radial-gradient(circle_at_50%_90%,rgba(236,72,153,.16),transparent_35%)]" />
+
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(168,85,247,.25),transparent_40%),radial-gradient(circle_at_80%_20%,rgba(236,72,153,.2),transparent_40%),radial-gradient(circle_at_50%_80%,rgba(124,58,237,.2),transparent_40%)]" />
 
         <div className="absolute -top-40 -left-40 w-[520px] h-[520px] bg-fuchsia-500/20 rounded-full blur-[120px] animate-pulse" />
         <div className="absolute -bottom-40 -right-40 w-[620px] h-[620px] bg-purple-600/20 rounded-full blur-[140px] animate-pulse" />
         <div className="absolute top-1/2 left-1/2 w-[760px] h-[760px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-r from-fuchsia-500/10 via-purple-500/10 to-transparent blur-[120px] animate-[spin_38s_linear_infinite]" />
-
-        <div className="absolute inset-0 opacity-[0.06] bg-[linear-gradient(to_right,#fff_1px,transparent_1px),linear-gradient(to_bottom,#fff_1px,transparent_1px)] bg-[size:80px_80px]" />
 
         <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
           <div>
@@ -39,8 +38,8 @@ export default function App() {
               Premium websites for service businesses
             </div>
 
-            <h2 className="text-5xl md:text-7xl font-bold leading-[0.95] tracking-tight">
-              Websites That Make Your Business Look Expensive
+            <h2 className="text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight">
+              Websites That Make Your Business Look Next-Level
             </h2>
 
             <p className="mt-6 text-lg md:text-xl text-white/70 max-w-xl leading-relaxed">
