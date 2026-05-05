@@ -2,8 +2,6 @@ import React from "react";
 
 import preview from "../elevated-auto-preview.png";
 import portfolio from "../portfolio-mockup.png";
-import dogTraining from "../dog-training-preview.png";
-import heroBg from "../hero-bg.png";
 
 export default function App() {
   const primaryButton =
@@ -12,15 +10,9 @@ export default function App() {
   const secondaryButton =
     "inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-10 py-5 text-lg font-semibold text-white backdrop-blur transition duration-300 hover:scale-[1.05] hover:bg-white/15";
 
-  const services = [
-    ["Custom Web Design", "Modern websites designed around your brand, offer, and ideal customer.", portfolio],
-    ["Local SEO", "SEO-ready structure built to help your business get found online.", preview],
-    ["Website Redesign", "Turn outdated websites into polished, high-converting assets.", dogTraining],
-  ];
-
   const benefits = [
     ["01", "More Qualified Leads", "Designed to guide visitors toward calls, forms, and booked appointments."],
-    ["02", "Premium Credibility", "A polished site instantly makes your business feel trusted and established."],
+    ["02", "Premium Credibility", "A polished site makes your business feel trusted and established."],
     ["03", "SEO-Ready Structure", "Built with clean sections, keywords, speed, and local visibility in mind."],
     ["04", "Faster User Experience", "Clear layouts and fast pages help visitors stay longer and take action."],
     ["05", "Mobile-First Design", "Your site looks strong on phones, where most local customers are searching."],
@@ -42,18 +34,19 @@ export default function App() {
       </nav>
 
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center px-6 pt-32 overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src={heroBg}
-            alt="Built for Growth"
-            className="w-full h-full object-cover scale-105"
-          />
-          <div className="absolute inset-0 bg-black/65" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-black/20" />
+      <section className="min-h-screen flex items-center px-6 pt-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-[#100014] to-[#2a003f]" />
+
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <h2 className="text-[15vw] font-black tracking-[-0.08em] text-white/[0.045] uppercase select-none">
+            Built for Growth
+          </h2>
         </div>
 
-        <div className="relative z-10 max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+        <div className="absolute top-[-200px] left-[-100px] w-[550px] h-[550px] bg-fuchsia-500/20 blur-[130px]" />
+        <div className="absolute bottom-[-200px] right-[-100px] w-[550px] h-[550px] bg-purple-600/20 blur-[130px]" />
+
+        <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-fuchsia-300 text-xs uppercase tracking-[0.3em] mb-4">
               Premium websites for service businesses
@@ -76,6 +69,16 @@ export default function App() {
               <a href="#work" className={secondaryButton}>
                 View Work
               </a>
+            </div>
+          </div>
+
+          <div className="hidden lg:block">
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-4 shadow-2xl backdrop-blur">
+              <img
+                src={portfolio}
+                alt="Website preview"
+                className="rounded-2xl w-full h-[500px] object-cover"
+              />
             </div>
           </div>
         </div>
@@ -122,30 +125,51 @@ export default function App() {
         </div>
       </section>
 
-      {/* SERVICES */}
+      {/* SERVICES - FIXED */}
       <section className="py-24 px-6 max-w-7xl mx-auto">
-        <h2 className="text-4xl font-bold mb-12">Services</h2>
+        <div className="mb-12">
+          <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
+            Services
+          </p>
+
+          <h2 className="text-4xl md:text-5xl font-bold max-w-3xl">
+            Clean, conversion-focused websites built for small businesses.
+          </h2>
+        </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {services.map(([title, text, image]) => (
+          {[
+            {
+              title: "Custom Web Design",
+              text: "A modern, polished website designed around your brand, services, and ideal customer.",
+              icon: "✦",
+            },
+            {
+              title: "Local SEO",
+              text: "Pages structured to help your business show up for the services and locations you want to rank for.",
+              icon: "⌁",
+            },
+            {
+              title: "Website Redesign",
+              text: "Transform an outdated site into a sharper, faster, more trustworthy online presence.",
+              icon: "↗",
+            },
+          ].map((service) => (
             <div
-              key={title}
-              className="group overflow-hidden rounded-3xl border border-white/10 bg-white/[0.05] hover:bg-white/[0.08] transition duration-500 shadow-2xl hover:-translate-y-2"
+              key={service.title}
+              className="group relative min-h-[360px] overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-white/[0.08] to-white/[0.02] p-8 shadow-2xl transition duration-500 hover:-translate-y-2 hover:border-fuchsia-300/30"
             >
-              <div className="h-64 overflow-hidden">
-                <img
-                  src={image}
-                  alt={title}
-                  className="w-full h-full object-cover object-center group-hover:scale-110 transition duration-700"
-                />
+              <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-fuchsia-500/10 blur-3xl opacity-0 transition duration-500 group-hover:opacity-100" />
+
+              <div className="mb-16 flex h-20 w-20 items-center justify-center rounded-3xl border border-white/10 bg-black/40 text-4xl text-fuchsia-200 shadow-[0_0_30px_rgba(217,70,239,.18)]">
+                {service.icon}
               </div>
 
-              <div className="p-8">
-                <h3 className="text-2xl font-semibold">{title}</h3>
-                <p className="text-white/60 mt-3 text-lg leading-relaxed">
-                  {text}
-                </p>
-              </div>
+              <h3 className="relative text-2xl font-semibold">{service.title}</h3>
+
+              <p className="relative mt-4 text-lg leading-relaxed text-white/60">
+                {service.text}
+              </p>
             </div>
           ))}
         </div>
