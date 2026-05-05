@@ -2,6 +2,7 @@ import React from "react";
 
 import preview from "../elevated-auto-preview.png";
 import portfolio from "../portfolio-mockup.png";
+import dogTraining from "../dog-training-preview.png";
 
 export default function App() {
   const primaryButton =
@@ -156,9 +157,21 @@ export default function App() {
 
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            ["Custom Web Design", "Modern websites designed around your brand.", portfolio],
-            ["Local SEO", "Built to rank and get found online.", preview],
-            ["Website Redesign", "Turn outdated sites into lead machines.", portfolio],
+            [
+              "Custom Web Design",
+              "Modern websites designed around your brand.",
+              portfolio,
+            ],
+            [
+              "Local SEO",
+              "Built to rank and get found online.",
+              preview,
+            ],
+            [
+              "Website Redesign",
+              "Turn outdated sites into lead machines.",
+              dogTraining,
+            ],
           ].map(([title, text, image]) => (
             <div
               key={title}
@@ -169,7 +182,7 @@ export default function App() {
               <img
                 src={image}
                 alt={title}
-                className="relative w-16 h-16 rounded-xl object-cover mb-6 border border-white/10 shadow-lg group-hover:scale-110 transition duration-500"
+                className="relative w-20 h-20 rounded-2xl object-cover mb-6 border border-white/10 shadow-lg group-hover:scale-110 transition duration-500"
               />
 
               <h3 className="relative text-xl font-semibold">{title}</h3>
