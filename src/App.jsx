@@ -29,6 +29,7 @@ export default function App() {
 
   return (
     <main className="bg-black text-white overflow-hidden">
+      {/* NAV */}
       <nav className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-xl border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="text-xl font-bold">
@@ -41,22 +42,14 @@ export default function App() {
         </div>
       </nav>
 
+      {/* HERO - NO VIDEO */}
       <section className="relative min-h-screen flex items-center px-6 pt-32 overflow-hidden">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/hero-video.mp4" type="video/mp4" />
-        </video>
-
-        <div className="absolute inset-0 bg-black/70" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-[#2b0037]/60" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-[#120017] to-[#300040]" />
+        <div className="absolute top-[-220px] left-[-160px] w-[650px] h-[650px] bg-fuchsia-500/20 blur-[140px]" />
+        <div className="absolute bottom-[-220px] right-[-160px] w-[650px] h-[650px] bg-purple-600/25 blur-[140px]" />
 
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
-          <h2 className="text-[14vw] font-black tracking-[-0.08em] text-white/[0.05] uppercase">
+          <h2 className="text-[14vw] font-black tracking-[-0.08em] text-white/[0.055] uppercase">
             Built for Growth
           </h2>
         </div>
@@ -72,7 +65,8 @@ export default function App() {
           </h1>
 
           <p className="text-white/75 mt-6 text-lg max-w-2xl leading-relaxed">
-            High-end, SEO-ready websites designed to turn visitors into real leads, calls, and revenue.
+            High-end, SEO-ready websites designed to turn visitors into real
+            leads, calls, and revenue.
           </p>
 
           <div className="flex flex-wrap gap-4 mt-10">
@@ -87,6 +81,7 @@ export default function App() {
         </div>
       </section>
 
+      {/* FEATURED PROJECT */}
       <section id="work" className="py-24 px-6 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
           <div>
@@ -106,7 +101,8 @@ export default function App() {
             </a>
 
             <p className="text-white/60 mt-5 text-lg">
-              A high-end website designed to build trust quickly and turn visitors into phone calls.
+              A high-end website designed to build trust quickly and turn
+              visitors into phone calls.
             </p>
           </div>
 
@@ -127,6 +123,7 @@ export default function App() {
         </div>
       </section>
 
+      {/* SERVICES */}
       <section className="py-24 px-6 max-w-7xl mx-auto">
         <div className="mb-12">
           <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
@@ -180,6 +177,7 @@ export default function App() {
         </div>
       </section>
 
+      {/* BENEFITS */}
       <section className="relative py-28 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(217,70,239,.16),transparent_32%),radial-gradient(circle_at_80%_70%,rgba(124,58,237,.16),transparent_35%)]" />
 
@@ -194,7 +192,8 @@ export default function App() {
             </h2>
 
             <p className="text-white/60 mt-5 text-lg">
-              Your website should do more than look good — it should help people find you, trust you, and contact you.
+              Your website should do more than look good — it should help
+              people find you, trust you, and contact you.
             </p>
           </div>
 
@@ -221,6 +220,7 @@ export default function App() {
         </div>
       </section>
 
+      {/* PRICING */}
       <section className="py-28 px-6 max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
@@ -232,15 +232,28 @@ export default function App() {
           </h2>
 
           <p className="text-white/60 mt-5 text-lg">
-            Every website is custom-built based on your business, services, and growth goals.
+            Every website is custom-built based on your business, services, and
+            growth goals.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {[
-            ["Starter Site", "$1,000 – $2,500", "For businesses that need a polished, professional online presence."],
-            ["Growth Website", "$2,500 – $5,000", "For businesses ready to generate consistent leads and rank locally."],
-            ["Premium Build", "$5,000+", "For businesses that want a high-end, scalable website built for expansion."],
+            [
+              "Starter Site",
+              "$1,000 – $2,500",
+              "For businesses that need a polished, professional online presence.",
+            ],
+            [
+              "Growth Website",
+              "$2,500 – $5,000",
+              "For businesses ready to generate consistent leads and rank locally.",
+            ],
+            [
+              "Premium Build",
+              "$5,000+",
+              "For businesses that want a high-end, scalable website built for expansion.",
+            ],
           ].map(([title, price, text], index) => (
             <div
               key={title}
@@ -251,22 +264,23 @@ export default function App() {
               }`}
             >
               <h3 className="text-2xl font-semibold mb-4">{title}</h3>
+
               <p className="text-3xl font-bold mb-5">{price}</p>
+
               <p className="text-white/60">{text}</p>
             </div>
           ))}
         </div>
       </section>
 
+      {/* FAQ */}
       <section className="py-24 px-6 max-w-5xl mx-auto">
         <div className="text-center mb-14">
           <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
             FAQ
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Common Questions
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold">Common Questions</h2>
         </div>
 
         <div className="space-y-4">
@@ -276,12 +290,14 @@ export default function App() {
               className="rounded-2xl border border-white/10 bg-white/[0.04] p-6"
             >
               <h3 className="text-xl font-semibold">{question}</h3>
+
               <p className="text-white/60 mt-3">{answer}</p>
             </div>
           ))}
         </div>
       </section>
 
+      {/* CONTACT */}
       <section
         id="contact"
         className="py-24 px-6 text-center bg-[radial-gradient(circle_at_50%_20%,rgba(255,0,204,.18),transparent_35%),linear-gradient(180deg,#000,#12001f)]"
