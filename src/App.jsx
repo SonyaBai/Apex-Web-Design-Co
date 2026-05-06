@@ -12,23 +12,60 @@ export default function App() {
     "inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-10 py-5 text-lg font-semibold text-white backdrop-blur transition duration-300 hover:scale-[1.05] hover:bg-white/15";
 
   const benefits = [
-    ["01", "More Qualified Leads", "Designed to guide visitors toward calls, forms, and booked appointments."],
-    ["02", "Premium Credibility", "A polished site makes your business feel trusted and established."],
-    ["03", "SEO-Ready Structure", "Built with clean sections, keywords, speed, and local visibility in mind."],
-    ["04", "Faster User Experience", "Clear layouts and fast pages help visitors stay longer and take action."],
-    ["05", "Mobile-First Design", "Your site looks strong on phones, where most local customers are searching."],
-    ["06", "Built to Scale", "Ready for future services, ads, SEO campaigns, and business growth."],
+    [
+      "01",
+      "More Qualified Leads",
+      "Designed to guide visitors toward calls, forms, and booked appointments.",
+    ],
+    [
+      "02",
+      "Premium Credibility",
+      "A polished site makes your business feel trusted and established.",
+    ],
+    [
+      "03",
+      "SEO-Ready Structure",
+      "Built with clean sections, keywords, speed, and local visibility in mind.",
+    ],
+    [
+      "04",
+      "Faster User Experience",
+      "Clear layouts and fast pages help visitors stay longer and take action.",
+    ],
+    [
+      "05",
+      "Mobile-First Design",
+      "Your site looks strong on phones, where most local customers are searching.",
+    ],
+    [
+      "06",
+      "Built to Scale",
+      "Ready for future services, ads, SEO campaigns, and business growth.",
+    ],
   ];
 
   const faqs = [
-    ["How long does a website take?", "Most small business websites can be completed in 7–14 days depending on pages, content, and revisions."],
-    ["Will my website be mobile-friendly?", "Yes. Every site is built to look polished on phones, tablets, and desktop screens."],
-    ["Can you redesign my current website?", "Yes. I can modernize an outdated website and make it stronger for leads, trust, and usability."],
-    ["Do you include SEO?", "Your website is built with SEO-ready structure, clean sections, service keywords, and local visibility in mind."],
+    [
+      "How long does a website take?",
+      "Most small business websites can be completed in 7–14 days depending on pages, content, and revisions.",
+    ],
+    [
+      "Will my website be mobile-friendly?",
+      "Yes. Every site is built to look polished on phones, tablets, and desktop screens.",
+    ],
+    [
+      "Can you redesign my current website?",
+      "Yes. I can modernize an outdated website and make it stronger for leads, trust, and usability.",
+    ],
+    [
+      "Do you include SEO?",
+      "Your website is built with SEO-ready structure, clean sections, service keywords, and local visibility in mind.",
+    ],
   ];
 
   return (
     <main className="bg-black text-white overflow-hidden">
+      {/* NAVBAR */}
       <nav className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-xl border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="text-xl font-bold">
@@ -41,17 +78,34 @@ export default function App() {
         </div>
       </nav>
 
+      {/* HERO */}
       <section className="relative min-h-screen flex items-center px-6 pt-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-[#120017] to-[#300040]" />
+        {/* VIDEO BACKGROUND */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+
+        {/* DARK OVERLAY */}
+        <div className="absolute inset-0 bg-black/70" />
+
+        {/* GLOW EFFECTS */}
         <div className="absolute top-[-220px] left-[-160px] w-[650px] h-[650px] bg-fuchsia-500/20 blur-[140px]" />
         <div className="absolute bottom-[-220px] right-[-160px] w-[650px] h-[650px] bg-purple-600/25 blur-[140px]" />
 
+        {/* BACKGROUND TEXT */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
-          <h2 className="text-[14vw] font-black tracking-[-0.08em] text-white/[0.055] uppercase">
+          <h2 className="text-[14vw] font-black tracking-[-0.08em] text-white/[0.06] uppercase">
             Built for Growth
           </h2>
         </div>
 
+        {/* HERO CONTENT */}
         <div className="relative z-10 max-w-7xl mx-auto">
           <p className="text-fuchsia-300 text-xs uppercase tracking-[0.3em] mb-4">
             Premium websites for service businesses
@@ -79,6 +133,7 @@ export default function App() {
         </div>
       </section>
 
+      {/* FEATURED PROJECT */}
       <section id="work" className="py-24 px-6 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
           <div>
@@ -120,6 +175,7 @@ export default function App() {
         </div>
       </section>
 
+      {/* SERVICES */}
       <section className="py-24 px-6 max-w-7xl mx-auto">
         <div className="mb-12">
           <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
@@ -156,7 +212,7 @@ export default function App() {
               <img
                 src={service.image}
                 alt={service.title}
-                className="absolute inset-0 w-full h-full object-cover object-top opacity-75 group-hover:scale-105 transition duration-700"
+                className="absolute inset-0 w-full h-full object-cover object-top opacity-80 group-hover:scale-105 transition duration-700"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/10" />
@@ -173,6 +229,7 @@ export default function App() {
         </div>
       </section>
 
+      {/* BENEFITS */}
       <section className="relative py-28 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(217,70,239,.16),transparent_32%),radial-gradient(circle_at_80%_70%,rgba(124,58,237,.16),transparent_35%)]" />
 
@@ -215,65 +272,16 @@ export default function App() {
         </div>
       </section>
 
-      <section className="py-28 px-6 max-w-7xl mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
-            Investment
-          </p>
-
-          <h2 className="text-4xl md:text-6xl font-bold">
-            Built for growth — not templates.
-          </h2>
-
-          <p className="text-white/60 mt-5 text-lg">
-            Every website is custom-built based on your business, services, and
-            growth goals.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {[
-            [
-              "Starter Site",
-              "$1,000 – $2,500",
-              "For businesses that need a polished, professional online presence.",
-            ],
-            [
-              "Growth Website",
-              "$2,500 – $5,000",
-              "For businesses ready to generate consistent leads and rank locally.",
-            ],
-            [
-              "Premium Build",
-              "$5,000+",
-              "For businesses that want a high-end, scalable website built for expansion.",
-            ],
-          ].map(([title, price, text], index) => (
-            <div
-              key={title}
-              className={`rounded-3xl p-8 border transition duration-500 hover:-translate-y-2 ${
-                index === 1
-                  ? "border-fuchsia-500/40 bg-fuchsia-900/15 shadow-[0_0_40px_rgba(217,70,239,.2)]"
-                  : "border-white/10 bg-white/[0.04]"
-              }`}
-            >
-              <h3 className="text-2xl font-semibold mb-4">{title}</h3>
-
-              <p className="text-3xl font-bold mb-5">{price}</p>
-
-              <p className="text-white/60">{text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
+      {/* FAQ */}
       <section className="py-24 px-6 max-w-5xl mx-auto">
         <div className="text-center mb-14">
           <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
             FAQ
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold">Common Questions</h2>
+          <h2 className="text-4xl md:text-5xl font-bold">
+            Common Questions
+          </h2>
         </div>
 
         <div className="space-y-4">
@@ -290,6 +298,7 @@ export default function App() {
         </div>
       </section>
 
+      {/* CONTACT */}
       <section
         id="contact"
         className="py-24 px-6 text-center bg-[radial-gradient(circle_at_50%_20%,rgba(255,0,204,.18),transparent_35%),linear-gradient(180deg,#000,#12001f)]"
@@ -342,10 +351,10 @@ export default function App() {
         </form>
       </section>
 
+      {/* FOOTER */}
       <footer className="py-8 text-center text-white/40 text-sm border-t border-white/10">
         © {new Date().getFullYear()} Apex Web Design
       </footer>
     </main>
   );
 }
-     
