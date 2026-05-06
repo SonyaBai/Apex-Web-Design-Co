@@ -29,7 +29,6 @@ export default function App() {
 
   return (
     <main className="bg-black text-white overflow-hidden">
-      {/* NAV */}
       <nav className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-xl border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="text-xl font-bold">
@@ -42,7 +41,6 @@ export default function App() {
         </div>
       </nav>
 
-      {/* HERO - NO VIDEO */}
       <section className="relative min-h-screen flex items-center px-6 pt-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-black via-[#120017] to-[#300040]" />
         <div className="absolute top-[-220px] left-[-160px] w-[650px] h-[650px] bg-fuchsia-500/20 blur-[140px]" />
@@ -81,7 +79,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* FEATURED PROJECT */}
       <section id="work" className="py-24 px-6 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
           <div>
@@ -123,7 +120,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* SERVICES */}
       <section className="py-24 px-6 max-w-7xl mx-auto">
         <div className="mb-12">
           <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
@@ -177,7 +173,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* BENEFITS */}
       <section className="relative py-28 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(217,70,239,.16),transparent_32%),radial-gradient(circle_at_80%_70%,rgba(124,58,237,.16),transparent_35%)]" />
 
@@ -220,7 +215,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* PRICING */}
       <section className="py-28 px-6 max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
@@ -273,7 +267,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* FAQ */}
       <section className="py-24 px-6 max-w-5xl mx-auto">
         <div className="text-center mb-14">
           <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
@@ -297,7 +290,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* CONTACT */}
       <section
         id="contact"
         className="py-24 px-6 text-center bg-[radial-gradient(circle_at_50%_20%,rgba(255,0,204,.18),transparent_35%),linear-gradient(180deg,#000,#12001f)]"
@@ -356,3 +348,4 @@ export default function App() {
     </main>
   );
 }
+     
