@@ -21,27 +21,14 @@ export default function App() {
   ];
 
   const faqs = [
-    [
-      "How long does a website take?",
-      "Most small business websites can be completed in 7–14 days depending on pages, content, and revisions.",
-    ],
-    [
-      "Will my website be mobile-friendly?",
-      "Yes. Every site is built to look polished on phones, tablets, and desktop screens.",
-    ],
-    [
-      "Can you redesign my current website?",
-      "Yes. I can modernize an outdated website and make it stronger for leads, trust, and usability.",
-    ],
-    [
-      "Do you include SEO?",
-      "Your website is built with SEO-ready structure, clean sections, service keywords, and local visibility in mind.",
-    ],
+    ["How long does a website take?", "Most small business websites can be completed in 7–14 days depending on pages, content, and revisions."],
+    ["Will my website be mobile-friendly?", "Yes. Every site is built to look polished on phones, tablets, and desktop screens."],
+    ["Can you redesign my current website?", "Yes. I can modernize an outdated website and make it stronger for leads, trust, and usability."],
+    ["Do you include SEO?", "Your website is built with SEO-ready structure, clean sections, service keywords, and local visibility in mind."],
   ];
 
   return (
     <main className="bg-black text-white overflow-hidden">
-      {/* NAV */}
       <nav className="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur-xl border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="text-xl font-bold">
@@ -54,9 +41,7 @@ export default function App() {
         </div>
       </nav>
 
-      {/* HERO */}
       <section className="relative min-h-screen flex items-center px-6 pt-32 overflow-hidden">
-        {/* VIDEO BACKGROUND */}
         <video
           autoPlay
           loop
@@ -67,19 +52,15 @@ export default function App() {
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
 
-        {/* OVERLAYS */}
         <div className="absolute inset-0 bg-black/70" />
-
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-[#2b0037]/60" />
 
-        {/* BACKGROUND TEXT */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
           <h2 className="text-[14vw] font-black tracking-[-0.08em] text-white/[0.05] uppercase">
             Built for Growth
           </h2>
         </div>
 
-        {/* HERO CONTENT */}
         <div className="relative z-10 max-w-7xl mx-auto">
           <p className="text-fuchsia-300 text-xs uppercase tracking-[0.3em] mb-4">
             Premium websites for service businesses
@@ -91,8 +72,7 @@ export default function App() {
           </h1>
 
           <p className="text-white/75 mt-6 text-lg max-w-2xl leading-relaxed">
-            High-end, SEO-ready websites designed to turn visitors into
-            real leads, calls, and revenue.
+            High-end, SEO-ready websites designed to turn visitors into real leads, calls, and revenue.
           </p>
 
           <div className="flex flex-wrap gap-4 mt-10">
@@ -107,7 +87,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* FEATURED PROJECT */}
       <section id="work" className="py-24 px-6 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
           <div>
@@ -127,8 +106,7 @@ export default function App() {
             </a>
 
             <p className="text-white/60 mt-5 text-lg">
-              A high-end website designed to build trust quickly and turn
-              visitors into phone calls.
+              A high-end website designed to build trust quickly and turn visitors into phone calls.
             </p>
           </div>
 
@@ -149,7 +127,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* SERVICES */}
       <section className="py-24 px-6 max-w-7xl mx-auto">
         <div className="mb-12">
           <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
@@ -183,21 +160,16 @@ export default function App() {
               key={service.title}
               className="group relative h-[420px] overflow-hidden rounded-[2rem] border border-white/10 shadow-2xl hover:-translate-y-2 transition duration-500"
             >
-              {/* IMAGE */}
               <img
                 src={service.image}
                 alt={service.title}
                 className="absolute inset-0 w-full h-full object-cover object-top opacity-75 group-hover:scale-105 transition duration-700"
               />
 
-              {/* OVERLAY */}
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-black/10" />
 
-              {/* CONTENT */}
               <div className="relative z-10 h-full flex flex-col justify-end p-8">
-                <h3 className="text-3xl font-semibold">
-                  {service.title}
-                </h3>
+                <h3 className="text-3xl font-semibold">{service.title}</h3>
 
                 <p className="mt-4 text-lg text-white/75 leading-relaxed">
                   {service.text}
@@ -208,7 +180,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* BENEFITS */}
       <section className="relative py-28 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(217,70,239,.16),transparent_32%),radial-gradient(circle_at_80%_70%,rgba(124,58,237,.16),transparent_35%)]" />
 
@@ -223,8 +194,7 @@ export default function App() {
             </h2>
 
             <p className="text-white/60 mt-5 text-lg">
-              Your website should do more than look good — it should help
-              people find you, trust you, and contact you.
+              Your website should do more than look good — it should help people find you, trust you, and contact you.
             </p>
           </div>
 
@@ -237,14 +207,10 @@ export default function App() {
                 <div className="absolute -inset-24 bg-fuchsia-500/10 blur-3xl opacity-0 group-hover:opacity-100 transition duration-500" />
 
                 <div className="relative mb-8 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-fuchsia-500/25 to-purple-700/20 shadow-[0_0_30px_rgba(217,70,239,.18)]">
-                  <span className="text-fuchsia-200 font-bold">
-                    {num}
-                  </span>
+                  <span className="text-fuchsia-200 font-bold">{num}</span>
                 </div>
 
-                <h3 className="relative text-2xl font-semibold">
-                  {title}
-                </h3>
+                <h3 className="relative text-2xl font-semibold">{title}</h3>
 
                 <p className="relative text-white/60 mt-4 leading-relaxed">
                   {text}
@@ -255,7 +221,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* PRICING */}
       <section className="py-28 px-6 max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
@@ -267,28 +232,15 @@ export default function App() {
           </h2>
 
           <p className="text-white/60 mt-5 text-lg">
-            Every website is custom-built based on your business,
-            services, and growth goals.
+            Every website is custom-built based on your business, services, and growth goals.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           {[
-            [
-              "Starter Site",
-              "$1,000 – $2,500",
-              "For businesses that need a polished, professional online presence.",
-            ],
-            [
-              "Growth Website",
-              "$2,500 – $5,000",
-              "For businesses ready to generate consistent leads and rank locally.",
-            ],
-            [
-              "Premium Build",
-              "$5,000+",
-              "For businesses that want a high-end, scalable website built for expansion.",
-            ],
+            ["Starter Site", "$1,000 – $2,500", "For businesses that need a polished, professional online presence."],
+            ["Growth Website", "$2,500 – $5,000", "For businesses ready to generate consistent leads and rank locally."],
+            ["Premium Build", "$5,000+", "For businesses that want a high-end, scalable website built for expansion."],
           ].map(([title, price, text], index) => (
             <div
               key={title}
@@ -299,16 +251,13 @@ export default function App() {
               }`}
             >
               <h3 className="text-2xl font-semibold mb-4">{title}</h3>
-
               <p className="text-3xl font-bold mb-5">{price}</p>
-
               <p className="text-white/60">{text}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* FAQ */}
       <section className="py-24 px-6 max-w-5xl mx-auto">
         <div className="text-center mb-14">
           <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
@@ -327,14 +276,12 @@ export default function App() {
               className="rounded-2xl border border-white/10 bg-white/[0.04] p-6"
             >
               <h3 className="text-xl font-semibold">{question}</h3>
-
               <p className="text-white/60 mt-3">{answer}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* CONTACT */}
       <section
         id="contact"
         className="py-24 px-6 text-center bg-[radial-gradient(circle_at_50%_20%,rgba(255,0,204,.18),transparent_35%),linear-gradient(180deg,#000,#12001f)]"
@@ -387,7 +334,6 @@ export default function App() {
         </form>
       </section>
 
-      {/* FOOTER */}
       <footer className="py-8 text-center text-white/40 text-sm border-t border-white/10">
         © {new Date().getFullYear()} Apex Web Design
       </footer>
