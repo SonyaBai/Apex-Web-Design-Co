@@ -67,135 +67,58 @@ export default function App() {
         </div>
       </section>
 
-      {/* SERVICES */}
-      <section className="relative py-32 px-6 overflow-hidden">
-        {/* BACKGROUND GLOW */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(217,70,239,0.15),transparent_60%)]"></div>
+     {/* SERVICES */}
+<section className="relative py-32 px-6 overflow-hidden">
+  {/* BACKGROUND GLOW */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(217,70,239,0.18),transparent_60%)]"></div>
 
-        <div className="relative z-10 max-w-7xl mx-auto">
-          {/* HEADER */}
-          <div className="mb-20">
-            <p className="uppercase tracking-[0.3em] text-fuchsia-300 text-sm mb-4">
-              Services
-            </p>
+  <div className="relative z-10 max-w-7xl mx-auto">
+    {/* HEADER */}
+    <div className="mb-16 text-center">
+      <p className="uppercase tracking-[0.3em] text-fuchsia-300 text-sm mb-4">
+        Services
+      </p>
 
-            <h2 className="text-5xl md:text-6xl font-black tracking-tight">
-              Premium Design.
-              <span className="block text-white/60">
-                Built to Convert.
-              </span>
-            </h2>
-          </div>
+      <h2 className="text-5xl md:text-6xl font-black tracking-tight">
+        Premium Design.
+        <span className="block text-white/60">
+          Built to Convert.
+        </span>
+      </h2>
+    </div>
 
-          {/* GRID */}
-          <div className="grid lg:grid-cols-3 gap-8">
-            {/* CARD 1 */}
-            <div className="group rounded-[34px] overflow-hidden border border-fuchsia-500/20 bg-white/[0.03] backdrop-blur-xl hover:-translate-y-2 transition-all duration-500 shadow-[0_0_80px_rgba(217,70,239,0.08)]">
-              <div className="relative h-[420px] overflow-hidden">
-                <img
-                  src={portfolioMockup}
-                  alt="Custom Web Design"
-                  className="w-full h-full object-cover object-top brightness-110 group-hover:scale-105 transition-all duration-700"
-                />
+    {/* MAIN SHOWCASE */}
+    <div className="group relative rounded-[40px] overflow-hidden border border-fuchsia-500/20 bg-white/[0.03] backdrop-blur-xl shadow-[0_0_120px_rgba(217,70,239,0.10)]">
+      {/* IMAGE */}
+      <div className="relative overflow-hidden">
+        <img
+          src={servicesPreview}
+          alt="Services Preview"
+          className="w-full object-cover brightness-110 group-hover:scale-[1.01] transition-all duration-700"
+        />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
-              </div>
+        {/* OVERLAY */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"></div>
+      </div>
 
-              <div className="p-8">
-                <div className="w-20 h-1 bg-fuchsia-500 rounded-full mb-6"></div>
+      {/* TEXT */}
+      <div className="absolute bottom-0 left-0 w-full p-8 md:p-14">
+        <div className="w-24 h-1 bg-fuchsia-500 rounded-full mb-6"></div>
 
-                <h3 className="text-4xl font-bold mb-5">
-                  Custom Web Design
-                </h3>
+        <h3 className="text-4xl md:text-6xl font-black mb-6 max-w-4xl">
+          Strategic Websites Designed
+          to Grow Your Business
+        </h3>
 
-                <p className="text-white/65 text-xl leading-relaxed">
-                  Modern websites designed around your
-                  business, services, and ideal customer.
-                </p>
-              </div>
-            </div>
-
-            {/* CARD 2 */}
-            <div className="group rounded-[34px] overflow-hidden border border-fuchsia-500/20 bg-white/[0.03] backdrop-blur-xl hover:-translate-y-2 transition-all duration-500 shadow-[0_0_80px_rgba(217,70,239,0.08)]">
-              <div className="relative h-[420px] overflow-hidden">
-                <img
-                  src={elevatedPreview}
-                  alt="Local SEO"
-                  className="w-full h-full object-cover object-top brightness-110 group-hover:scale-105 transition-all duration-700"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
-              </div>
-
-              <div className="p-8">
-                <div className="w-20 h-1 bg-fuchsia-500 rounded-full mb-6"></div>
-
-                <h3 className="text-4xl font-bold mb-5">
-                  Local SEO
-                </h3>
-
-                <p className="text-white/65 text-xl leading-relaxed">
-                  SEO-focused structure built to help your
-                  business rank and get found locally.
-                </p>
-              </div>
-            </div>
-
-            {/* CARD 3 */}
-            <div className="group rounded-[34px] overflow-hidden border border-fuchsia-500/20 bg-white/[0.03] backdrop-blur-xl hover:-translate-y-2 transition-all duration-500 shadow-[0_0_80px_rgba(217,70,239,0.08)]">
-              <div className="relative h-[420px] overflow-hidden bg-black">
-                <img
-                  src={servicesPreview}
-                  alt="Website Redesign"
-                  className="w-full h-full object-cover object-right brightness-110 group-hover:scale-105 transition-all duration-700"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
-              </div>
-
-              <div className="p-8">
-                <div className="w-20 h-1 bg-fuchsia-500 rounded-full mb-6"></div>
-
-                <h3 className="text-4xl font-bold mb-5">
-                  Website Redesign
-                </h3>
-
-                <p className="text-white/65 text-xl leading-relaxed">
-                  Transform outdated websites into polished,
-                  high-converting digital assets.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FEATURE SECTION */}
-      <section className="px-6 pb-32">
-        <div className="max-w-7xl mx-auto">
-          <div className="relative rounded-[40px] overflow-hidden border border-white/10">
-            <img
-              src={servicesPreview}
-              alt="Agency Preview"
-              className="w-full object-cover brightness-110"
-            />
-
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-
-            <div className="absolute bottom-10 left-10 max-w-3xl">
-              <p className="uppercase tracking-[0.3em] text-fuchsia-300 text-sm mb-3">
-                Built for Growth
-              </p>
-
-              <h2 className="text-5xl md:text-6xl font-black leading-tight">
-                Strategic websites designed to look premium
-                and convert visitors into customers.
-              </h2>
-            </div>
-          </div>
-        </div>
-      </section>
-
+        <p className="text-white/70 text-lg md:text-2xl leading-relaxed max-w-3xl">
+          High-end web design, local SEO, branding,
+          and conversion-focused layouts built for
+          modern service businesses.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
       {/* FAQ */}
       <section className="px-6 pb-32">
         <div className="max-w-5xl mx-auto">
