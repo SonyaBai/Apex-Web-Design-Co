@@ -78,21 +78,22 @@ export default function App() {
         </div>
       </nav>
 
-      {/* HERO */}
+      {/* HERO WITH VIDEO BACKGROUND */}
       <section className="relative min-h-screen flex items-center px-6 pt-32 overflow-hidden">
-        {/* VIDEO BACKGROUND */}
         <video
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
 
-        {/* DARK OVERLAY */}
-        <div className="absolute inset-0 bg-black/70" />
+        {/* DARK READABILITY OVERLAY */}
+        <div className="absolute inset-0 bg-black/65" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-[#2b0037]/55" />
 
         {/* GLOW EFFECTS */}
         <div className="absolute top-[-220px] left-[-160px] w-[650px] h-[650px] bg-fuchsia-500/20 blur-[140px]" />
