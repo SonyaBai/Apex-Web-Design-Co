@@ -11,6 +11,27 @@ export default function App() {
   const secondaryButton =
     "inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-10 py-5 text-lg font-semibold text-white backdrop-blur transition duration-300 hover:scale-[1.05] hover:bg-white/15";
 
+  const services = [
+    {
+      title: "Custom Web Design",
+      text: "Modern websites designed around your business, services, and ideal customer.",
+      image: portfolio,
+      imageClass: "object-cover object-top opacity-85",
+    },
+    {
+      title: "Local SEO",
+      text: "SEO-focused structure built to help your business rank and get found locally.",
+      image: preview,
+      imageClass: "object-cover object-top opacity-85",
+    },
+    {
+      title: "Website Redesign",
+      text: "Transform outdated websites into polished, high-converting assets.",
+      image: dogTraining,
+      imageClass: "object-contain object-top p-8 opacity-90",
+    },
+  ];
+
   const benefits = [
     ["01", "More Qualified Leads", "Designed to guide visitors toward calls, forms, and booked appointments."],
     ["02", "Premium Credibility", "A polished site makes your business feel trusted and established."],
@@ -27,58 +48,24 @@ export default function App() {
     ["Do you include SEO?", "Your website is built with SEO-ready structure, clean sections, service keywords, and local visibility in mind."],
   ];
 
-  const services = [
-    {
-      title: "Custom Web Design",
-      text: "Modern websites designed around your business, services, and ideal customer.",
-      image: portfolio,
-      position: "object-top",
-    },
-    {
-      title: "Local SEO",
-      text: "SEO-focused structure built to help your business rank and get found locally.",
-      image: preview,
-      position: "object-top",
-    },
-    {
-      title: "Website Redesign",
-      text: "Transform outdated websites into polished, high-converting assets.",
-      image: dogTraining,
-      position: "object-top",
-    },
-  ];
-
   return (
     <main className="bg-black text-white overflow-hidden">
-      {/* NAVBAR */}
       <nav className="fixed top-0 left-0 w-full z-50 bg-black/65 backdrop-blur-xl border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <h1 className="text-xl font-bold">
             Apex <span className="text-fuchsia-400">Web Design</span>
           </h1>
-
-          <a href="#contact" className={primaryButton}>
-            Get Quote
-          </a>
+          <a href="#contact" className={primaryButton}>Get Quote</a>
         </div>
       </nav>
 
-      {/* HERO WITH BRIGHTER VIDEO BACKGROUND */}
       <section className="relative min-h-screen flex items-center px-6 pt-32 overflow-hidden">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          className="absolute inset-0 w-full h-full object-cover opacity-90"
-        >
+        <video autoPlay muted loop playsInline preload="auto" className="absolute inset-0 w-full h-full object-cover opacity-90">
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
 
         <div className="absolute inset-0 bg-black/45" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-[#2b0037]/30" />
-
         <div className="absolute top-[-220px] left-[-160px] w-[650px] h-[650px] bg-fuchsia-500/20 blur-[140px]" />
         <div className="absolute bottom-[-220px] right-[-160px] w-[650px] h-[650px] bg-purple-600/25 blur-[140px]" />
 
@@ -94,105 +81,69 @@ export default function App() {
           </p>
 
           <h1 className="text-5xl md:text-7xl font-bold leading-tight max-w-4xl">
-            Websites Built to Grow{" "}
-            <span className="text-fuchsia-300">Your Business</span>
+            Websites Built to Grow <span className="text-fuchsia-300">Your Business</span>
           </h1>
 
           <p className="text-white/80 mt-6 text-lg max-w-2xl leading-relaxed">
-            High-end, SEO-ready websites designed to turn visitors into real
-            leads, calls, and revenue.
+            High-end, SEO-ready websites designed to turn visitors into real leads, calls, and revenue.
           </p>
 
           <div className="flex flex-wrap gap-4 mt-10">
-            <a href="#contact" className={primaryButton}>
-              Get My Free Website Quote
-            </a>
-
-            <a href="#work" className={secondaryButton}>
-              View Work
-            </a>
+            <a href="#contact" className={primaryButton}>Get My Free Website Quote</a>
+            <a href="#work" className={secondaryButton}>View Work</a>
           </div>
         </div>
       </section>
 
-      {/* FEATURED PROJECT */}
       <section id="work" className="py-24 px-6 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
           <div>
-            <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
-              Featured Project
-            </p>
+            <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">Featured Project</p>
 
-            <a
-              href="https://www.elevateautoanddieselrepair.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-fuchsia-300 transition"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold">
-                Elevated Auto & Diesel
-              </h2>
+            <a href="https://www.elevateautoanddieselrepair.com" target="_blank" rel="noopener noreferrer" className="hover:text-fuchsia-300 transition">
+              <h2 className="text-4xl md:text-5xl font-bold">Elevated Auto & Diesel</h2>
             </a>
 
             <p className="text-white/60 mt-5 text-lg">
-              A high-end website designed to build trust quickly and turn
-              visitors into phone calls.
+              A high-end website designed to build trust quickly and turn visitors into phone calls.
             </p>
           </div>
 
           <div className="rounded-3xl border border-white/10 bg-white/5 p-4 shadow-2xl">
-            <a
-              href="https://www.elevateautoanddieselrepair.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block overflow-hidden rounded-2xl"
-            >
-              <img
-                src={preview}
-                alt="Elevated Auto preview"
-                className="rounded-2xl w-full h-[420px] object-cover object-top transition duration-500 group-hover:scale-[1.03]"
-              />
+            <a href="https://www.elevateautoanddieselrepair.com" target="_blank" rel="noopener noreferrer" className="group block overflow-hidden rounded-2xl">
+              <img src={preview} alt="Elevated Auto preview" className="rounded-2xl w-full h-[420px] object-cover object-top transition duration-500 group-hover:scale-[1.03]" />
             </a>
           </div>
         </div>
       </section>
 
-      {/* SERVICES */}
       <section className="py-28 px-6 max-w-7xl mx-auto">
         <div className="mb-14">
-          <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
-            Services
-          </p>
+          <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">Services</p>
 
           <h2 className="text-4xl md:text-6xl font-bold max-w-4xl leading-tight">
             Premium websites designed to look elevated and convert visitors into customers.
           </h2>
 
           <p className="text-white/60 text-lg mt-6 max-w-2xl">
-            Every project is built with modern visuals, mobile responsiveness,
-            clean structure, and conversion-focused design.
+            Every project is built with modern visuals, mobile responsiveness, clean structure, and conversion-focused design.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid lg:grid-cols-3 gap-8">
           {services.map((service) => (
             <div
               key={service.title}
-              className="group relative overflow-hidden rounded-[2.2rem] border border-white/10 bg-white/[0.03] h-[500px] shadow-[0_25px_80px_rgba(0,0,0,.55)] transition duration-500 hover:-translate-y-2"
+              className="group relative overflow-hidden rounded-[2.2rem] border border-white/10 bg-[#070707] h-[500px] shadow-[0_25px_80px_rgba(0,0,0,.55)] transition duration-500 hover:-translate-y-2"
             >
               <img
                 src={service.image}
                 alt={service.title}
-                className={`absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105 ${
-                  service.title === "Website Redesign"
-                    ? "object-top scale-125"
-                    : service.position
-                }`}
+                className={`absolute inset-0 w-full h-full transition duration-700 group-hover:scale-[1.03] ${service.imageClass}`}
               />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/10" />
-
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-[radial-gradient(circle_at_top,rgba(217,70,239,.22),transparent_55%)]" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/5" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(217,70,239,.18),transparent_55%)]" />
 
               <div className="relative z-10 h-full flex flex-col justify-end p-10">
                 <div className="mb-5">
@@ -212,32 +163,25 @@ export default function App() {
         </div>
       </section>
 
-      {/* BENEFITS */}
       <section className="relative py-28 px-6 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(217,70,239,.16),transparent_32%),radial-gradient(circle_at_80%_70%,rgba(124,58,237,.16),transparent_35%)]" />
 
         <div className="relative max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
-              Why It Works
-            </p>
+            <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">Why It Works</p>
 
             <h2 className="text-4xl md:text-6xl font-bold">
               Built for visibility, trust, and conversion.
             </h2>
 
             <p className="text-white/60 mt-5 text-lg">
-              Your website should do more than look good — it should help
-              people find you, trust you, and contact you.
+              Your website should do more than look good — it should help people find you, trust you, and contact you.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {benefits.map(([num, title, text]) => (
-              <div
-                key={title}
-                className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.045] p-8 shadow-2xl transition duration-500 hover:-translate-y-2 hover:bg-white/[0.08]"
-              >
+              <div key={title} className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.045] p-8 shadow-2xl transition duration-500 hover:-translate-y-2 hover:bg-white/[0.08]">
                 <div className="absolute -inset-24 bg-fuchsia-500/10 blur-3xl opacity-0 group-hover:opacity-100 transition duration-500" />
 
                 <div className="relative mb-8 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-fuchsia-500/25 to-purple-700/20 shadow-[0_0_30px_rgba(217,70,239,.18)]">
@@ -245,88 +189,44 @@ export default function App() {
                 </div>
 
                 <h3 className="relative text-2xl font-semibold">{title}</h3>
-
-                <p className="relative text-white/60 mt-4 leading-relaxed">
-                  {text}
-                </p>
+                <p className="relative text-white/60 mt-4 leading-relaxed">{text}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
       <section className="py-24 px-6 max-w-5xl mx-auto">
         <div className="text-center mb-14">
-          <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
-            FAQ
-          </p>
-
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Common Questions
-          </h2>
+          <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">FAQ</p>
+          <h2 className="text-4xl md:text-5xl font-bold">Common Questions</h2>
         </div>
 
         <div className="space-y-4">
           {faqs.map(([question, answer]) => (
-            <div
-              key={question}
-              className="rounded-2xl border border-white/10 bg-white/[0.04] p-6"
-            >
+            <div key={question} className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
               <h3 className="text-xl font-semibold">{question}</h3>
-
               <p className="text-white/60 mt-3">{answer}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section
-        id="contact"
-        className="py-24 px-6 text-center bg-[radial-gradient(circle_at_50%_20%,rgba(255,0,204,.18),transparent_35%),linear-gradient(180deg,#000,#12001f)]"
-      >
-        <h2 className="text-4xl font-bold mb-6">
-          Let’s build your next website
-        </h2>
+      <section id="contact" className="py-24 px-6 text-center bg-[radial-gradient(circle_at_50%_20%,rgba(255,0,204,.18),transparent_35%),linear-gradient(180deg,#000,#12001f)]">
+        <h2 className="text-4xl font-bold mb-6">Let’s build your next website</h2>
 
         <p className="text-white/60 mb-8">
           Tell me about your business and I’ll show you what’s possible.
         </p>
 
-        <form
-          action="https://formspree.io/f/xojrvwwb"
-          method="POST"
-          className="max-w-xl mx-auto space-y-4 text-left"
-        >
-          <input
-            type="hidden"
-            name="_subject"
-            value="New Lead - Apex Web Design"
-          />
+        <form action="https://formspree.io/f/xojrvwwb" method="POST" className="max-w-xl mx-auto space-y-4 text-left">
+          <input type="hidden" name="_subject" value="New Lead - Apex Web Design" />
 
-          <input
-            name="name"
-            required
-            placeholder="Name"
-            className="w-full p-4 bg-white/10 border border-white/10 rounded-xl"
-          />
+          <input name="name" required placeholder="Name" className="w-full p-4 bg-white/10 border border-white/10 rounded-xl" />
 
-          <input
-            name="email"
-            required
-            type="email"
-            placeholder="Email"
-            className="w-full p-4 bg-white/10 border border-white/10 rounded-xl"
-          />
+          <input name="email" required type="email" placeholder="Email" className="w-full p-4 bg-white/10 border border-white/10 rounded-xl" />
 
-          <textarea
-            name="message"
-            required
-            rows="5"
-            placeholder="Tell me about your project"
-            className="w-full p-4 bg-white/10 border border-white/10 rounded-xl"
-          />
+          <textarea name="message" required rows="5" placeholder="Tell me about your project" className="w-full p-4 bg-white/10 border border-white/10 rounded-xl" />
 
           <button type="submit" className={`w-full ${primaryButton}`}>
             Get My Free Website Quote
