@@ -27,6 +27,27 @@ export default function App() {
     ["Do you include SEO?", "Your website is built with SEO-ready structure, clean sections, service keywords, and local visibility in mind."],
   ];
 
+  const services = [
+    {
+      title: "Custom Web Design",
+      text: "Modern websites designed around your business, services, and ideal customer.",
+      image: portfolio,
+      position: "object-top",
+    },
+    {
+      title: "Local SEO",
+      text: "SEO-focused structure built to help your business rank and get found locally.",
+      image: preview,
+      position: "object-top",
+    },
+    {
+      title: "Website Redesign",
+      text: "Transform outdated websites into polished, high-converting assets.",
+      image: dogTraining,
+      position: "object-top",
+    },
+  ];
+
   return (
     <main className="bg-black text-white overflow-hidden">
       {/* NAVBAR */}
@@ -154,26 +175,7 @@ export default function App() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {[
-            {
-              title: "Custom Web Design",
-              text: "Modern websites designed around your business, services, and ideal customer.",
-              image: portfolio,
-              position: "object-top",
-            },
-            {
-              title: "Local SEO",
-              text: "SEO-focused structure built to help your business rank and get found locally.",
-              image: preview,
-              position: "object-top",
-            },
-            {
-              title: "Website Redesign",
-              text: "Transform outdated websites into polished, high-converting assets.",
-              image: dogTraining,
-              position: "object-center",
-            },
-          ].map((service) => (
+          {services.map((service) => (
             <div
               key={service.title}
               className="group relative overflow-hidden rounded-[2.2rem] border border-white/10 bg-white/[0.03] h-[500px] shadow-[0_25px_80px_rgba(0,0,0,.55)] transition duration-500 hover:-translate-y-2"
@@ -181,7 +183,11 @@ export default function App() {
               <img
                 src={service.image}
                 alt={service.title}
-                className={`absolute inset-0 w-full h-full ${service.position} object-cover group-hover:scale-105 transition duration-700`}
+                className={`absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105 ${
+                  service.title === "Website Redesign"
+                    ? "object-top scale-125"
+                    : service.position
+                }`}
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-black/10" />
