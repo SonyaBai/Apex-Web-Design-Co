@@ -1,9 +1,6 @@
-import servicesPreview from "../services-preview.png";
-
 export default function App() {
   return (
-    <div className="bg-black text-white overflow-hidden">
-      {/* HERO */}
+    <div className="bg-black text-white min-h-screen overflow-hidden">
       <section className="relative min-h-screen flex items-center overflow-hidden">
         <video
           autoPlay
@@ -16,7 +13,6 @@ export default function App() {
         </video>
 
         <div className="absolute inset-0 bg-black/60" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-purple-950/40" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-32">
           <p className="uppercase tracking-[0.35em] text-fuchsia-300 text-sm mb-6">
@@ -29,58 +25,42 @@ export default function App() {
           </h1>
 
           <p className="text-xl text-white/75 max-w-2xl leading-relaxed mb-10">
-            High-end websites, local SEO strategy, and modern branding designed
-            to turn traffic into real leads, calls, and revenue.
+            High-end websites, local SEO, and modern branding designed to turn visitors into leads.
           </p>
 
-          <div className="flex flex-wrap gap-5">
-            <a
-              href="#contact"
-              className="bg-white text-black px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-all"
-            >
-              Get My Free Quote
-            </a>
-
-            <a
-              href="#services"
-              className="border border-white/20 bg-white/10 backdrop-blur-xl px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all"
-            >
-              View Work
-            </a>
-          </div>
+          <a
+            href="#contact"
+            className="inline-block bg-white text-black px-8 py-4 rounded-full font-semibold text-lg"
+          >
+            Get My Free Quote
+          </a>
         </div>
       </section>
 
-      {/* SERVICES - ONE CLEAN IMAGE */}
-      <section id="services" className="relative py-28 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(217,70,239,0.18),transparent_60%)]" />
+      <section className="py-28 px-6">
+        <div className="max-w-7xl mx-auto">
+          <p className="uppercase tracking-[0.3em] text-fuchsia-300 text-sm mb-4">
+            Services
+          </p>
 
-        <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="mb-12">
-            <p className="uppercase tracking-[0.3em] text-fuchsia-300 text-sm mb-4">
-              Services
-            </p>
+          <h2 className="text-5xl md:text-6xl font-black mb-12">
+            Premium Design.
+            <span className="block text-white/60">Built to Convert.</span>
+          </h2>
 
-            <h2 className="text-5xl md:text-6xl font-black tracking-tight max-w-5xl">
-              Premium Design.
-              <span className="block text-white/60">Built to Convert.</span>
-            </h2>
-          </div>
-
-          <div className="rounded-[40px] overflow-hidden border border-fuchsia-500/30 shadow-[0_0_120px_rgba(217,70,239,0.18)] bg-black">
+          <div className="rounded-[40px] overflow-hidden border border-fuchsia-500/30 bg-black shadow-[0_0_120px_rgba(217,70,239,0.18)]">
             <img
-              src={servicesPreview}
+              src="/services-preview.png"
               alt="Services preview"
-              className="w-full h-auto block object-cover brightness-110"
+              className="w-full h-auto block brightness-110"
             />
           </div>
         </div>
       </section>
 
-      {/* CONTACT */}
       <section
         id="contact"
-        className="py-28 px-6 text-center bg-[radial-gradient(circle_at_50%_20%,rgba(255,0,204,.18),transparent_35%),linear-gradient(180deg,#000,#12001f)]"
+        className="py-28 px-6 text-center bg-gradient-to-b from-black to-[#16001f]"
       >
         <h2 className="text-5xl font-black mb-6">
           Let’s build your next website
@@ -95,39 +75,11 @@ export default function App() {
           method="POST"
           className="max-w-xl mx-auto space-y-4 text-left"
         >
-          <input
-            type="hidden"
-            name="_subject"
-            value="New Lead - Apex Web Design"
-          />
+          <input name="name" required placeholder="Name" className="w-full p-4 bg-white/10 border border-white/10 rounded-xl" />
+          <input name="email" required type="email" placeholder="Email" className="w-full p-4 bg-white/10 border border-white/10 rounded-xl" />
+          <textarea name="message" required rows="5" placeholder="Tell me about your project" className="w-full p-4 bg-white/10 border border-white/10 rounded-xl" />
 
-          <input
-            name="name"
-            required
-            placeholder="Name"
-            className="w-full p-4 bg-white/10 border border-white/10 rounded-xl"
-          />
-
-          <input
-            name="email"
-            required
-            type="email"
-            placeholder="Email"
-            className="w-full p-4 bg-white/10 border border-white/10 rounded-xl"
-          />
-
-          <textarea
-            name="message"
-            required
-            rows="5"
-            placeholder="Tell me about your project"
-            className="w-full p-4 bg-white/10 border border-white/10 rounded-xl"
-          />
-
-          <button
-            type="submit"
-            className="w-full bg-white text-black px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition-all"
-          >
+          <button type="submit" className="w-full bg-white text-black px-8 py-4 rounded-full font-semibold text-lg">
             Get My Free Website Quote
           </button>
         </form>
