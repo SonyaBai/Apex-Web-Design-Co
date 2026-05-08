@@ -1,81 +1,71 @@
 export default function App() {
   return (
-    <main className="min-h-screen bg-black text-white overflow-hidden">
-      <section className="relative min-h-screen flex items-center px-6 pt-32 overflow-hidden">
+    <main style={{ background: "#000", color: "#fff", minHeight: "100vh", fontFamily: "Arial, sans-serif" }}>
+      <section style={{ position: "relative", minHeight: "100vh", display: "flex", alignItems: "center", padding: "80px 24px", overflow: "hidden" }}>
         <video
           autoPlay
           muted
           loop
           playsInline
-          preload="auto"
-          className="absolute inset-0 w-full h-full object-cover opacity-90"
+          style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", opacity: 0.65 }}
         >
           <source src="/hero-video.mp4" type="video/mp4" />
         </video>
 
-        <div className="absolute inset-0 bg-black/45" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-[#2b0037]/30" />
+        <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,.55)" }} />
 
-        <div className="relative z-10 max-w-7xl mx-auto">
-          <p className="text-fuchsia-300 text-xs uppercase tracking-[0.3em] mb-4">
+        <div style={{ position: "relative", zIndex: 2, maxWidth: "1100px", margin: "0 auto" }}>
+          <p style={{ color: "#f0abfc", letterSpacing: "4px", textTransform: "uppercase", fontSize: "14px" }}>
             Premium websites for service businesses
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight max-w-4xl">
-            Websites Built to Grow{" "}
-            <span className="text-fuchsia-300">Your Business</span>
+          <h1 style={{ fontSize: "clamp(48px, 8vw, 100px)", lineHeight: ".95", margin: "20px 0", fontWeight: 900 }}>
+            Websites Built to Grow <span style={{ color: "#f0abfc", display: "block" }}>Your Business</span>
           </h1>
 
-          <p className="text-white/80 mt-6 text-lg max-w-2xl leading-relaxed">
+          <p style={{ fontSize: "22px", maxWidth: "700px", color: "rgba(255,255,255,.75)", lineHeight: 1.5 }}>
             High-end, SEO-ready websites designed to turn visitors into real leads, calls, and revenue.
           </p>
 
-          <div className="flex flex-wrap gap-4 mt-10">
-            <a href="#contact" className="rounded-full bg-white px-10 py-5 text-lg font-semibold text-black">
-              Get My Free Website Quote
-            </a>
-
-            <a href="#services" className="rounded-full border border-white/30 bg-white/10 px-10 py-5 text-lg font-semibold text-white">
-              View Work
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" className="relative py-28 px-6 overflow-hidden">
-        <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="mb-12">
-            <p className="text-fuchsia-300 uppercase tracking-[0.3em] text-xs mb-4">
-              Services
-            </p>
-
-            <h2 className="text-4xl md:text-6xl font-bold max-w-4xl leading-tight">
-              Premium websites designed to look elevated and convert visitors into customers.
-            </h2>
-          </div>
-
-          <div className="rounded-[40px] overflow-hidden border border-fuchsia-500/30 bg-black shadow-[0_0_120px_rgba(217,70,239,0.18)]">
-            <img
-              src="/services-preview.png"
-              alt="Premium website services preview"
-              className="block w-full h-auto brightness-110"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" className="py-24 px-6 text-center bg-gradient-to-b from-black to-[#12001f]">
-        <h2 className="text-4xl font-bold mb-6">Let’s build your next website</h2>
-
-        <form action="https://formspree.io/f/xojrvwwb" method="POST" className="max-w-xl mx-auto space-y-4 text-left">
-          <input name="name" required placeholder="Name" className="w-full p-4 bg-white/10 border border-white/10 rounded-xl" />
-          <input name="email" required type="email" placeholder="Email" className="w-full p-4 bg-white/10 border border-white/10 rounded-xl" />
-          <textarea name="message" required rows="5" placeholder="Tell me about your project" className="w-full p-4 bg-white/10 border border-white/10 rounded-xl" />
-
-          <button type="submit" className="w-full rounded-full bg-white px-8 py-4 text-lg font-semibold text-black">
+          <a
+            href="#contact"
+            style={{
+              display: "inline-block",
+              marginTop: "32px",
+              background: "#fff",
+              color: "#000",
+              padding: "18px 32px",
+              borderRadius: "999px",
+              fontWeight: 700,
+              textDecoration: "none",
+            }}
+          >
             Get My Free Website Quote
-          </button>
-        </form>
+          </a>
+        </div>
+      </section>
+
+      <section id="services" style={{ padding: "90px 24px", maxWidth: "1200px", margin: "0 auto" }}>
+        <p style={{ color: "#f0abfc", letterSpacing: "4px", textTransform: "uppercase" }}>Services</p>
+
+        <h2 style={{ fontSize: "clamp(40px, 6vw, 72px)", marginBottom: "40px" }}>
+          Premium Design. <span style={{ color: "rgba(255,255,255,.55)" }}>Built to Convert.</span>
+        </h2>
+
+        <div style={{ border: "1px solid rgba(217,70,239,.45)", borderRadius: "32px", overflow: "hidden", boxShadow: "0 0 80px rgba(217,70,239,.22)" }}>
+          <img
+            src="/services-preview.png"
+            alt="Services preview"
+            style={{ width: "100%", display: "block" }}
+          />
+        </div>
+      </section>
+
+      <section id="contact" style={{ padding: "90px 24px", textAlign: "center", background: "linear-gradient(#000, #170020)" }}>
+        <h2 style={{ fontSize: "48px" }}>Let’s build your next website</h2>
+        <p style={{ color: "rgba(255,255,255,.65)", fontSize: "20px" }}>
+          Tell me about your business and I’ll show you what’s possible.
+        </p>
       </section>
     </main>
   );
