@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function App() {
   return (
     <main style={{ background: "#000", color: "#fff", minHeight: "100vh", fontFamily: "Arial, sans-serif" }}>
