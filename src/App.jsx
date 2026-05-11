@@ -97,36 +97,11 @@ export default function App() {
             ))}
           </div>
 
-          <div className="preview-frame k9-preview">
-            <div className="mock-nav">
-              <div>
-                <strong>K9 Elite</strong>
-                <span>Training</span>
-              </div>
-              <a href="#contact">Get Started</a>
-            </div>
-            <div className="mock-hero">
-              <div>
-                <p className="eyebrow">Website Redesign</p>
-                <h3>Calm. Obedient. Confident.</h3>
-                <p>Professional dog training programs designed for real-world results.</p>
-              </div>
-              <div className="mock-photo-stack">
-                <img
-                  src="/dog-website-real.png"
-                  alt="Two real Belgian Malinois dogs sitting on a wooded road"
-                />
-                <img
-                  src="/dog-website-real-2.jpg"
-                  alt="Belgian Malinois training photo"
-                />
-              </div>
-            </div>
-            <div className="mock-services">
-              <span>Puppy Training</span>
-              <span>Basic Obedience</span>
-              <span>Behavior Modification</span>
-            </div>
+          <div className="preview-frame">
+            <img
+              src="/services-preview.png"
+              alt="Apex Web Design service examples featuring beauty, auto repair, and dog training websites"
+            />
           </div>
         </div>
       </section>
@@ -227,7 +202,9 @@ export default function App() {
               Monthly growth care is available for businesses that want hosting, SEO support, performance
               monitoring, and site updates handled under one polished plan.
             </p>
-            <p className="promo-note">Contact us Today for Current Promotions and New Business Discounts!</p>
+            <a className="button button-dark promo-button" href="#contact">
+              Contact us Today for Current Promotions and New Business Discounts!
+            </a>
           </div>
           <a className="button button-dark" href="#contact">
             Ask About Pricing

@@ -485,10 +485,8 @@ h2 span {
   line-height: 1.6;
 }
 
-.promo-note {
-  margin-top: 18px;
-  color: #050505;
-  font-weight: 800;
+.promo-button {
+  margin-top: 22px;
 }
 
 .pricing-chart {
