@@ -741,8 +741,8 @@ h2 span {
   overflow: hidden;
   isolation: isolate;
   background-image:
-    linear-gradient(90deg, rgba(5, 5, 5, 0.92), rgba(5, 5, 5, 0.64) 48%, rgba(5, 5, 5, 0.32)),
-    linear-gradient(180deg, rgba(5, 5, 5, 0.2), rgba(5, 5, 5, 0.84)),
+    linear-gradient(90deg, rgba(5, 5, 5, 0.76), rgba(5, 5, 5, 0.38) 48%, rgba(5, 5, 5, 0.08)),
+    linear-gradient(180deg, rgba(5, 5, 5, 0.04), rgba(5, 5, 5, 0.42)),
     url("/digital-studio-bg.png");
   background-size: cover;
   background-position: center;
@@ -753,7 +753,9 @@ h2 span {
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: radial-gradient(circle at 80% 20%, rgba(240, 171, 252, 0.14), transparent 30%);
+  background:
+    radial-gradient(circle at 80% 20%, rgba(240, 171, 252, 0.1), transparent 30%),
+    linear-gradient(180deg, transparent 0%, rgba(5, 5, 5, 0.3) 100%);
   pointer-events: none;
 }
 
@@ -763,9 +765,9 @@ h2 span {
 
 .digital-trends-section .card {
   background:
-    linear-gradient(145deg, rgba(12, 12, 12, 0.76), rgba(12, 12, 12, 0.5)),
-    rgba(5, 5, 5, 0.58);
-  backdrop-filter: blur(12px);
+    linear-gradient(145deg, rgba(12, 12, 12, 0.56), rgba(12, 12, 12, 0.34)),
+    rgba(5, 5, 5, 0.34);
+  backdrop-filter: blur(8px);
 }
 
 .topic-panel {
