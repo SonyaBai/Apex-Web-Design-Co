@@ -1271,13 +1271,20 @@ h2 span {
     aspect-ratio: auto;
     width: 100%;
     max-width: 100%;
-    min-height: 700px;
+    min-height: 620px;
+  }
+
+  .filmstrip-video {
+    height: 100%;
+    object-position: center top;
+    transform: scale(1.18);
+    transform-origin: center top;
   }
 
   .film-copy {
     left: 12px;
     right: auto;
-    bottom: 18px;
+    bottom: 14px;
     width: calc(100% - 24px);
     max-width: calc(100% - 24px);
     padding: 20px 16px;
