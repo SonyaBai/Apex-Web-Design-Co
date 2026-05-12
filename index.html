@@ -610,8 +610,8 @@ h2 span {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.58), transparent 18%, transparent 82%, rgba(0, 0, 0, 0.62)),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.42), transparent 34%, transparent 68%, rgba(0, 0, 0, 0.58));
+    linear-gradient(90deg, rgba(0, 0, 0, 0.46), transparent 18%, transparent 82%, rgba(0, 0, 0, 0.52)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.3), transparent 34%, transparent 68%, rgba(0, 0, 0, 0.48));
   z-index: 2;
   pointer-events: none;
 }
@@ -621,7 +621,7 @@ h2 span {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(1.28) contrast(1.08) saturate(1.12);
+  filter: brightness(1.48) contrast(1.1) saturate(1.16);
 }
 
 .film-copy {
@@ -633,8 +633,8 @@ h2 span {
   padding: clamp(22px, 3vw, 34px);
   border-left: 2px solid rgba(240, 171, 252, 0.72);
   background:
-    linear-gradient(135deg, rgba(10, 10, 10, 0.66), rgba(10, 10, 10, 0.34)),
-    rgba(8, 8, 8, 0.48);
+    linear-gradient(135deg, rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 0.3)),
+    rgba(8, 8, 8, 0.44);
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
   backdrop-filter: blur(10px);
   pointer-events: none;
@@ -1262,12 +1262,43 @@ h2 span {
   }
 
   .filmstrip-showcase {
-    min-height: 360px;
+    aspect-ratio: auto;
+    min-height: 620px;
   }
 
   .film-copy {
-    bottom: 54px;
-    padding-top: 120px;
+    left: 14px;
+    right: 14px;
+    bottom: 18px;
+    max-width: none;
+    padding: 20px 18px;
+    border-left-width: 2px;
+  }
+
+  .film-copy span {
+    margin-bottom: 12px;
+    font-size: 0.64rem;
+    letter-spacing: 0.22em;
+  }
+
+  .film-copy p {
+    font-size: clamp(1.45rem, 8vw, 2rem);
+    line-height: 1.08;
+  }
+
+  .film-copy .film-detail {
+    max-width: 100%;
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+
+  .examples-section h2 {
+    max-width: 92vw;
+    font-size: clamp(2.7rem, 14vw, 4rem);
+    line-height: 0.96;
+    margin-bottom: 28px;
+    overflow-wrap: normal;
+    word-break: normal;
   }
 
   .about-section {
