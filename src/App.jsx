@@ -2,20 +2,24 @@ import React, { useState } from "react";
 
 const services = [
   {
+    kicker: "Craft",
     title: "Custom Website Design",
-    text: "A polished site built around your offer, your market, and the actions you want visitors to take.",
+    text: "Custom digital experiences shaped around your offer, your market, and the actions you want visitors to take.",
   },
   {
+    kicker: "Optimize",
     title: "SEO Foundations",
-    text: "Clean structure, fast pages, strong headings, and local search basics so customers can find you.",
+    text: "Search-ready structure, fast pages, strong headings, and local signals so the right customers can find you.",
   },
   {
+    kicker: "Convert",
     title: "Lead-Focused Pages",
-    text: "Clear calls to action, trust-building sections, and layouts that make it easy to request a quote.",
+    text: "Strategic calls to action, trust-building sections, and layouts that make the next step feel effortless.",
   },
   {
+    kicker: "Sustain",
     title: "Monthly Growth Care",
-    text: "Premium hosting, ongoing SEO support, performance monitoring, and site updates bundled into one predictable monthly plan.",
+    text: "Hosting, SEO support, performance monitoring, and site updates handled under one polished monthly plan.",
   },
 ];
 
@@ -114,10 +118,10 @@ export default function App() {
         </video>
 
         <div className="container hero-content">
-          <p className="eyebrow">Premium websites for service businesses</p>
+          <p className="eyebrow">Luxury web design for service businesses</p>
           <h1>
-            Websites Built to Grow
-            <span>Your Business</span>
+            Digital presence
+            <span>designed to elevate trust.</span>
           </h1>
           <p className="hero-copy">
             Top-tier, SEO-ready websites designed to turn visitors into real leads, calls, and revenue.
@@ -147,14 +151,15 @@ export default function App() {
 
       <section id="services" className="section">
         <div className="container">
-          <p className="eyebrow">Services</p>
+          <p className="eyebrow">Our Services</p>
           <h2>
-            Premium Design. <span>Built to Convert.</span>
+            Measurable brand polish. <span>Built for local growth.</span>
           </h2>
 
           <div className="service-grid">
             {services.map((service) => (
               <article className="card" key={service.title}>
+                <span className="service-kicker">{service.kicker}</span>
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
               </article>
