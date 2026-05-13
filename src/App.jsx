@@ -131,7 +131,7 @@ export default function App() {
           <img className="hero-logo" src="/apex-logo.png" alt="Apex Web Design Co" />
           <p className="eyebrow">Apex Web Design Co</p>
           <h1>
-            Digital precision for brands ready to look established.
+            Digital Precision for Brands Built for Impact
           </h1>
           <p className="hero-copy">
             Top-tier websites for service businesses that need credibility, clarity, and a smoother path from first visit to inquiry.
