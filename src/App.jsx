@@ -55,12 +55,30 @@ const faqs = [
   },
 ];
 
+const googleReviewsUrl = "https://www.google.com/search?q=Apex+Web+Design+Co+reviews";
+
+const reviewHighlights = [
+  {
+    title: "Google Business Profile",
+    text: "A dedicated trust section designed to connect visitors with your public Google reviews and business profile.",
+  },
+  {
+    title: "Review-ready layout",
+    text: "Built so live Google review widgets or approved API feeds can be added without redesigning the page.",
+  },
+  {
+    title: "Proof before the form",
+    text: "Placed near the quote flow so visitors see credibility signals before sending an information request.",
+  },
+];
+
 const menuItems = [
   { label: "Services", href: "#services", detail: "Design, SEO, hosting, and care" },
   { label: "Case Studies", href: "#case-studies", detail: "Recent client work and outcomes" },
   { label: "Work by Industry", href: "#work-by-industry", detail: "Visual directions for service brands" },
   { label: "Digital Trends", href: "#digital-trends", detail: "What modern buyers expect online" },
   { label: "About", href: "#about", detail: "How Apex builds trust-first websites" },
+  { label: "Reviews", href: "#reviews", detail: "Google Business trust signals" },
   { label: "Contact", href: "#contact", detail: "Start an information request" },
 ];
 
@@ -385,6 +403,37 @@ export default function App() {
               </article>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section id="reviews" className="section reviews-section">
+        <div className="container reviews-panel">
+          <div className="reviews-copy">
+            <p className="eyebrow">Google Reviews</p>
+            <h2>Trust signals that support the first conversation.</h2>
+            <p>
+              Connect visitors to Apex Web Design Co's Google Business reviews so they can see real public feedback before they request a quote.
+            </p>
+            <a className="button" href={googleReviewsUrl} target="_blank" rel="noreferrer">
+              View Reviews on Google
+            </a>
+          </div>
+          <div className="google-review-card" aria-label="Google reviews connection">
+            <span className="review-badge">Google</span>
+            <strong>Reviews ready</strong>
+            <div className="review-stars" aria-hidden="true">★★★★★</div>
+            <p>
+              Add your Google Business Profile review link, Place ID, or approved widget code to turn this panel into a live review feed.
+            </p>
+          </div>
+        </div>
+        <div className="container review-grid">
+          {reviewHighlights.map((item) => (
+            <article className="card" key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.text}</p>
+            </article>
+          ))}
         </div>
       </section>
 

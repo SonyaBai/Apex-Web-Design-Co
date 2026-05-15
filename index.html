@@ -1170,6 +1170,104 @@ h2 span {
   gap: 14px;
 }
 
+.reviews-section {
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid var(--line);
+  background:
+    radial-gradient(circle at 18% 10%, rgba(240, 171, 252, 0.14), transparent 32%),
+    radial-gradient(circle at 86% 20%, rgba(231, 199, 123, 0.1), transparent 30%),
+    linear-gradient(135deg, #070707, #120616 62%, #050505);
+}
+
+.reviews-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 100% 8px;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.reviews-panel,
+.review-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.reviews-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.42fr);
+  gap: clamp(24px, 5vw, 60px);
+  align-items: end;
+}
+
+.reviews-copy h2 {
+  margin-bottom: 18px;
+}
+
+.reviews-copy > p:not(.eyebrow) {
+  max-width: 720px;
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(1.12rem, 2vw, 1.35rem);
+  line-height: 1.58;
+}
+
+.google-review-card {
+  border: 1px solid rgba(240, 171, 252, 0.22);
+  border-radius: 10px;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.035)),
+    rgba(255, 255, 255, 0.045);
+  padding: clamp(24px, 4vw, 34px);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(12px);
+}
+
+.review-badge {
+  display: inline-flex;
+  margin-bottom: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  padding: 8px 12px;
+  text-transform: uppercase;
+}
+
+.google-review-card strong {
+  display: block;
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.review-stars {
+  margin: 14px 0;
+  color: var(--accent-2);
+  font-size: 1.4rem;
+  letter-spacing: 0.08em;
+}
+
+.google-review-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 34px;
+}
+
 .contact {
   padding: 86px 24px 96px;
   text-align: center;
@@ -1399,6 +1497,8 @@ h2 span {
   .stats-grid,
   .service-grid,
   .topic-grid,
+  .reviews-panel,
+  .review-grid,
   .work-panel,
   .split-grid,
   .mock-hero,
@@ -1702,7 +1802,8 @@ h2 span {
           <a href="#work-by-industry"><span>03</span><strong>Work by Industry</strong><em>Visual directions for service brands</em></a>
           <a href="#digital-trends"><span>04</span><strong>Digital Trends</strong><em>What modern buyers expect online</em></a>
           <a href="#about"><span>05</span><strong>About</strong><em>How Apex builds trust-first websites</em></a>
-          <a href="#contact"><span>06</span><strong>Contact</strong><em>Start an information request</em></a>
+          <a href="#reviews"><span>06</span><strong>Reviews</strong><em>Google Business trust signals</em></a>
+          <a href="#contact"><span>07</span><strong>Contact</strong><em>Start an information request</em></a>
         </nav>
         <p class="menu-note">Premium websites built for service businesses that need more calls, quote requests, and credibility.</p>
       </aside>
@@ -1992,6 +2093,43 @@ h2 span {
               <p>Every layout is built for phones first, then refined for tablets and desktop screens.</p>
             </article>
           </div>
+        </div>
+      </section>
+
+      <section id="reviews" class="section reviews-section">
+        <div class="container reviews-panel">
+          <div class="reviews-copy">
+            <p class="eyebrow">Google Reviews</p>
+            <h2>Trust signals that support the first conversation.</h2>
+            <p>
+              Connect visitors to Apex Web Design Co's Google Business reviews so they can see real public feedback before they request a quote.
+            </p>
+            <a class="button" href="https://www.google.com/search?q=Apex+Web+Design+Co+reviews" target="_blank" rel="noreferrer">
+              View Reviews on Google
+            </a>
+          </div>
+          <div class="google-review-card" aria-label="Google reviews connection">
+            <span class="review-badge">Google</span>
+            <strong>Reviews ready</strong>
+            <div class="review-stars" aria-hidden="true">★★★★★</div>
+            <p>
+              Add your Google Business Profile review link, Place ID, or approved widget code to turn this panel into a live review feed.
+            </p>
+          </div>
+        </div>
+        <div class="container review-grid">
+          <article class="card">
+            <h3>Google Business Profile</h3>
+            <p>A dedicated trust section designed to connect visitors with your public Google reviews and business profile.</p>
+          </article>
+          <article class="card">
+            <h3>Review-ready layout</h3>
+            <p>Built so live Google review widgets or approved API feeds can be added without redesigning the page.</p>
+          </article>
+          <article class="card">
+            <h3>Proof before the form</h3>
+            <p>Placed near the quote flow so visitors see credibility signals before sending an information request.</p>
+          </article>
         </div>
       </section>
 
