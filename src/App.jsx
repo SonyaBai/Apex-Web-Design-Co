@@ -155,7 +155,7 @@ export default function App() {
             Top-tier websites for service businesses that need credibility, clarity, and a smoother path from first visit to inquiry.
           </p>
           <a className="button" href="#contact">
-            Get My Free Website Quote
+            Get a Free Website Quote
           </a>
         </div>
       </section>
